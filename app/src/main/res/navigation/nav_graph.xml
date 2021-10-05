@@ -25,5 +25,9 @@
     <fragment
         android:id="@+id/favoriteListFragment"
         android:name="com.example.moviedbapp.favoritelist.FavoriteListFragment"
-        android:label="FavoriteListFragment" />
+        android:label="FavoriteListFragment" >
+        <action
+            android:id="@+id/action_favoriteListFragment_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment" />
+    </fragment>
 </navigation>

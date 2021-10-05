@@ -38,7 +38,7 @@ class MovieListFragment : BaseFragment<MovieListViewModel, FragmentMovieListBind
 
         dataBinding.movieList.adapter = MovieListAdapter(this)
 
-        //interface'e eklenip clean architecture ile daha iyi yapılabilirdi yetiştirmek için burada bırakıyorum
+        //interface'e eklenip clean architecture için daha iyi yapılabilirdi yetiştirmek için burada bırakıyorum
         dataBinding.movieList.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                 super.onScrollStateChanged(recyclerView, newState)
