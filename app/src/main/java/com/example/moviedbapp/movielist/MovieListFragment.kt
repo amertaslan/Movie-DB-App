@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.AbsListView
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.setupWithNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.moviedbapp.R
@@ -32,6 +33,8 @@ class MovieListFragment : BaseFragment<MovieListViewModel, FragmentMovieListBind
         dataBinding.lifecycleOwner = this
 
         dataBinding.viewModel = viewModel
+
+        dataBinding.bottomNav.setupWithNavController(this.findNavController())
 
         dataBinding.movieList.adapter = MovieListAdapter(this)
 

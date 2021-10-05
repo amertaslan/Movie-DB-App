@@ -53,7 +53,7 @@ class MovieDetailFragment : BaseFragment<MovieDetailViewModel, FragmentMovieDeta
             dataBinding.movieDetailRunTimeText.text = it.runTime
             dataBinding.movieDetailVoteText.text = it.voteAverage
             bindImage(dataBinding.movieDetailPosterImage, posterPath)
-            modelData = MovieDataModel(1, it.id, it.title)
+            modelData = MovieDataModel(movieId = it.id, title = it.title)
         })
 
         dataBinding.movieDetailSaveButton.setOnClickListener {
