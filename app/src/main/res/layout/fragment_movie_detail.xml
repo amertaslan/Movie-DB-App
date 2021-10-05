@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.moviedbapp.moviedetail.MovieDetailViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".moviedetail.MovieDetailFragment">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/movie_detail_poster_image"
+            android:layout_width="410dp"
+            android:layout_height="324dp"
+            android:scaleType="fitEnd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/movie_detail_title_text"
+            tools:text="hahahhahahha"
+            android:layout_marginTop="@dimen/movie_detail_large_margin"
+            android:textSize="@dimen/movie_detail_large_text_size"
+            android:layout_width="wrap_content"
+            android:textColor="@color/movie_detail_text_color"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/movie_detail_save_button"
+            app:layout_constraintTop_toBottomOf="@id/movie_detail_poster_image"/>
+
+        <Button
+            android:id="@+id/movie_detail_save_button"
+            android:text="Save"
+            android:layout_marginTop="@dimen/movie_detail_medium_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/movie_detail_poster_image"
+            app:layout_constraintStart_toEndOf="@id/movie_detail_title_text"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/movie_detail_vote_text"
+            tools:text="hahahhahahha"
+            android:layout_marginTop="@dimen/movie_detail_large_margin"
+            android:textColor="@color/movie_detail_text_color"
+            android:textSize="@dimen/movie_detail_medium_text_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/movie_detail_date_text"
+            app:layout_constraintTop_toBottomOf="@id/movie_detail_title_text"/>
+
+        <TextView
+            android:id="@+id/movie_detail_date_text"
+            tools:text="hahahhahahha"
+            android:layout_marginTop="@dimen/movie_detail_large_margin"
+            android:textColor="@color/movie_detail_text_color"
+            android:textSize="@dimen/movie_detail_medium_text_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/movie_detail_vote_text"
+            app:layout_constraintEnd_toStartOf="@id/movie_detail_run_time_text"
+            app:layout_constraintTop_toBottomOf="@id/movie_detail_title_text"/>
+
+        <TextView
+            android:id="@+id/movie_detail_run_time_text"
+            tools:text="hahahahhahaha"
+            android:layout_marginTop="@dimen/movie_detail_large_margin"
+            android:textColor="@color/movie_detail_text_color"
+            android:textSize="@dimen/movie_detail_medium_text_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/movie_detail_date_text"
+            app:layout_constraintTop_toBottomOf="@id/movie_detail_title_text"/>
+
+        <TextView
+            android:id="@+id/movie_detail_overview_text"
+            android:textColor="@color/movie_detail_text_color"
+            android:textSize="@dimen/movie_detail_medium_text_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/movie_detail_date_text"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
