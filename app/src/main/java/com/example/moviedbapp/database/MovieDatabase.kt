@@ -26,7 +26,5 @@ abstract class MovieDatabase: RoomDatabase() {
             MovieDatabase::class.java,
             DB_NAME
         ).build()
-
-
     }
 }
